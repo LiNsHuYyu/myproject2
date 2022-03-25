@@ -1,4 +1,4 @@
-package fju.edu;
+package fju.edu.sales;
 
 public class SalesTester {
     public static void main(String[] args) {

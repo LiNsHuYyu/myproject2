@@ -1,4 +1,4 @@
-package fju.edu;
+package fju.edu.score;
 
 public class Student {
     String name;

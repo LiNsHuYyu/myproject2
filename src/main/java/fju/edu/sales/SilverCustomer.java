@@ -1,4 +1,4 @@
-package fju.edu;
+package fju.edu.sales;
 
 public class SilverCustomer extends Customer{
 

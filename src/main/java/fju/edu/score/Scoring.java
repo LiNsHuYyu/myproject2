@@ -1,4 +1,4 @@
-package fju.edu;
+package fju.edu.score;
 
 public class Scoring {
     public static void main(String[] args) {
