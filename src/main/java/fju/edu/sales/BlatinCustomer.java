@@ -7,10 +7,11 @@ public class BlatinCustomer extends GoldenCustomer{
 
     @Override
     public float backMoney(){
+        off = 0.2f;
         return (amount*off);
     }
     public float total(){
         off = 0.7f;
-        return (amount-backMoney())*off;
+        return amount*off;
     }
 }
