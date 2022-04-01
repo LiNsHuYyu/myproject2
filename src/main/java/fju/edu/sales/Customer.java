@@ -2,16 +2,16 @@ package fju.edu.sales;
 
 public class Customer {
     String id;
-    int amount;
-    //float off = 0.1f;
+    float amount;
+    float off = 0.1f;
     public Customer(String id, int amount){
         this.id = id;
         this.amount = amount;
     }
-    public int backMoney(){
-        return ((amount/1000)*100);
+    public float backMoney(){
+        return amount*off;
     }
-    public int total(){
+    public float total(){
         return amount-backMoney();
     }
     public void print(){

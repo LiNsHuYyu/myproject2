@@ -1,10 +1,10 @@
 package fju.edu.sales;
 
-public class GoldenCustomer extends SilverCustomer {
-    public GoldenCustomer(String id, int amount){
+public class DiscountCustomer extends Customer{
+    public DiscountCustomer(String id, int amount){
         super(id, amount);
-        off = 0.2f;
     }
+
     @Override
     public float backMoney(){
         return amount*off;

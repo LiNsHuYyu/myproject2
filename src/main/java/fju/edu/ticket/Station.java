@@ -2,14 +2,15 @@ package fju.edu.ticket;
 
 public class Station {
     int id;
-    String station;
+    String name;
 
-    Station taipei = new Station(1,"TAIPEI");
-    Station taichung = new Station(2,"TAICHUNG");
-    Station kaohsiung = new Station(3,"KAOHSIUNG");
+    public static final Station TAIPEI_STATION = new Station(100,"Taipei");
+    public static final Station TAICHUNG_STATION = new Station(200,"Taichung");
+    public static final Station KAOHSIUNG_STATION = new Station(300,"Kaohsiung");
 
-    public Station(int id, String station){
+
+    public Station(int id, String name){
         this.id = id;
-        this.station = station;
+        this.name = name;
     }
 }
