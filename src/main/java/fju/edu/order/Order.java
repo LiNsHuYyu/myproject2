@@ -22,4 +22,13 @@ public class Order {
     public int total(){
         return amount+shipFeed;
     }
+
+    /*public int total(){
+        if (delivery instanceof ShopeeDelivery){
+            shipFeed = 0;
+            return amount;
+        }else {
+            return amount+shipFeed;
+        }
+    }*/
 }
