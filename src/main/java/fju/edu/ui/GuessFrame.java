@@ -8,7 +8,9 @@ import java.util.Random;
 
 public class GuessFrame extends JFrame {
     //Fields
-    JLabel label = new JLabel("Zzzzz");
+    int min = 0;
+    int max = 100;
+    JLabel label = new JLabel("Enter a number from "+min+" to "+max);
     JButton button = new JButton("Guess");
     JTextField number = new JTextField(8);
     //Constructors
@@ -19,7 +21,7 @@ public class GuessFrame extends JFrame {
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setVisible(true);
         Random r = new Random();
-        int secret = r.nextInt(10)+1;
+        int secret = r.nextInt(100)+1;
         System.out.println("secret:"+secret);
         button.addActionListener(new ActionListener() {
             @Override
@@ -27,11 +29,13 @@ public class GuessFrame extends JFrame {
                 int num = Integer.parseInt(number.getText());
                 System.out.println(num);
                 if (num < secret){
-                    label.setText("Bigger!!!");
+                    min = num;
+                    label.setText("Enter a number from "+min+" to "+max);
                 }else if (num > secret){
-                    label.setText("Smaller!!!");
+                    max = num;
+                    label.setText("Enter a number from "+min+" to "+max);
                 }else {
-                    label.setText("BINGO!!!!!");
+                    label.setText("BINGO!, the secret number is "+secret);
                 }
                 //label.setText("Hello World!");
             }
