@@ -9,13 +9,14 @@ public class ScoringFile {
         try {
             FileReader fileReader = new FileReader("scores.txt");//throws
             int data = fileReader.read();
-            System.out.println(data);
-            data = fileReader.read();
-            System.out.println(data);
+            while (data!=-1){
+                System.out.print((char) data);
+                data = fileReader.read();
+            }
         }catch (FileNotFoundException e){
-            System.out.println("檔案讀取失敗");
+            System.out.println("file loading failed");
         }catch (IOException e){
-            System.out.println("資料讀取失敗");
+            System.out.println("data loading failed");
         }
         System.out.println("Testing");
     }
